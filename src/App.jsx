@@ -13,6 +13,7 @@ import Home from "./Home";
 import About from "./About";
 import Courses from "./Courses";
 import Login from './Login';
+import Login_demo from './Login_demo';
 
 import { colors } from '@material-ui/core';
 import { Switch } from 'react-router-dom';
@@ -34,7 +35,7 @@ function App() {
 
           <Route exact path="/about" component={About} />
           <Route path="/course" component={Courses} />
-          <Route exact path="/login" component={Login} />
+          <Route exact path="/login" component={Login_demo} />
           <Route exact path="/" component={Home} />
           {/* <Protected path="/course" component={Courses} auth={isAuth}/> */}
           {/* <Redirect to="/" /> */}

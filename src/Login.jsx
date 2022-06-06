@@ -65,7 +65,7 @@ useEffect(()=>{
  return (
      <div>
         <Navbar/>
-        <form >
+        {/* <form > */}
             <div class="main text-center col-lg-6 col-md-6 col-12 justify-content-center align-items-center mx-auto">
 
  {/* <input type="checkbox" id="chk" aria-hidden="true" /> */}
@@ -76,7 +76,7 @@ useEffect(()=>{
                         <input class="ip_form_cls" type="text" name="txt"  placeholder="User name" required="" onChange={(e)=>setName(e.target.value)}/>
                         <input class="ip_form_cls" type="email" name="email"  placeholder="Email" required="" onChange={(e)=>setName(e.target.value)}/>
                         <input class="ip_form_cls" type="password" name="pswd"  placeholder="Password" required="" onChange={(e)=>setName(e.target.value)}/>
-                        <button class="new-btn btn_form_cls" onClick={handleSubmit}>Sign up</button>
+                        <button type='submit' class="new-btn btn_form_cls" onClick={handleSubmit}>Sign up</button>
                     {/* </form> */}
                 </div>
 
@@ -89,7 +89,7 @@ useEffect(()=>{
                     {/* </form> */}
                 </div>
             </div>
-            </form>
+            {/* </form> */}
         </div>
 
     );

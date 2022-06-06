@@ -148,3 +148,7 @@ label{
 #chk:checked ~ .signup label{
 	transform: scale(.6);
 }
+
+a :hover{
+	text-decoration: none;
+}
