@@ -6,12 +6,13 @@ import { BlurOnTwoTone, Brightness1 } from '@material-ui/icons';
 const name= document.getElementById("name");
 const email= document.getElementById("email");
 const password= document.getElementById("password");
-const email1= document.getElementById("email1");
-const password1= document.getElementById("password1");
+
+
 //const button1 = document.getElementById("button1");
 
 const data = [];
 const data1 =[];
+//var data_arr= [];
 var isLoggedIn= false;
 
 console.log(name);
@@ -29,18 +30,18 @@ console.log(name);
      //localStorage.setItem("data", JSON.stringify(data));
 //});
 
-function filter(data_arr){
-        // name= value.name;
-        // email=value.email;
-        // password=value.password;
+// function filter(data_arr){
+//         // name= value.name;
+//         // email=value.email;
+//         // password=value.password;
 
 
-        if(email===data1.email1 && password===data1.password1)
-        isLoggedIn= true;
+//         if(email===data1.email1 && password===data1.password1)
+//         isLoggedIn= true;
 
-//console.log(isLoggedIn);
-console.log(isLoggedIn);
-}
+// //console.log(isLoggedIn);
+// console.log(isLoggedIn);
+// }
 
 const handleSignUp=(e)=>{
     e.preventDefault();
@@ -51,29 +52,43 @@ const handleSignUp=(e)=>{
         
         });
 
-     //   console.log(data);
+     //  console.log(data);
 
        // data.splice(0, 1);
         localStorage.setItem("data", JSON.stringify(data));
        // console.log(data);
 
-    //    console.log(localStorage.getItem("data"));
+  //  console.log(typeof(JSON.parse(localStorage.getItem("data"))));
 }
 
 const handleLogin=(e)=>{
     e.preventDefault();
-   data1.push({
-       email1: email1.value,
-       password1: password1.value,
-   });
+    const email1= document.getElementById("email1");
+    const password1= document.getElementById("password1");
+
+   console.log(email1)
+   console.log(password1)
+
 
 //const [LogEmail, LogPassword]= data1;
 
-const data_arr= localStorage.getItem("data");
+//var data_arr= localStorage.getItem("data");
 
-console.log(data_arr);
+//console.log(data_arr);
 
-{data.map(filter)}
+{JSON.parse(localStorage.getItem("data")).map((value)=>{
+    // name= value.name;
+    // email=value.email;
+    // password=value.password;
+
+    
+
+    if(data1.email1===value.email && data1.password1===value.password)
+    isLoggedIn= true;
+
+//console.log(isLoggedIn);
+console.log(isLoggedIn);
+})}
 
 }
 
